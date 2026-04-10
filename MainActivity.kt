@@ -1,3 +1,7 @@
+fun cekLulus(nilai: Int): String {
+    return if (nilai >= 70) "Lulus" else "Tidak Lulus"
+}
+
 fun hitungGrade(nilai: Int): String {
     return when {
         nilai >= 90 -> "A"
@@ -15,8 +19,10 @@ fun main() {
     val nilai = readLine()?.toIntOrNull() ?: 0
 
     val grade = hitungGrade(nilai)
+    val status = cekLulus(nilai)
 
-    println("Halo $nama")
-    println("Nilai kamu: $nilai")
-    println("Grade kamu: $grade")
+    println("Nama: $nama")
+    println("Nilai: $nilai")
+    println("Grade: $grade")
+    println("Status: $status")
 }
