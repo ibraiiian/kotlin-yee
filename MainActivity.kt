@@ -1,3 +1,7 @@
 fun main() {
-    println("Hello Kotlin 🚀")
+    val nama = "Ibrahim"
+    val umur = 20
+
+    println("Halo $nama")
+    println("Umur kamu $umur tahun")
 }
