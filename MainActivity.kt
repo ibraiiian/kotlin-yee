@@ -1,11 +1,13 @@
 fun main() {
-    val nama = "Ibrahim"
-    val umur = 20
-    val Hobi = "Menulis"
+    print("Masukkan nama: ")
+    val nama = readLine() ?: "User"
 
+    print("Masukkan nilai: ")
+    val nilai = readLine()?.toIntOrNull() ?: 0
 
-    println("Halo $nama")
-    println("Umur kamu $umur tahun")
-    println("Hobi kamu $Hobi")
-
+    if (nilai >= 75) {
+        println("Halo $nama, kamu LULUS 🎉")
+    } else {
+        println("Halo $nama, kamu TIDAK LULUS 😢")
+    }
 }
