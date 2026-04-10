@@ -1,13 +1,14 @@
 fun main() {
-    print("Masukkan nama: ")
-    val nama = readLine() ?: "User"
-
     print("Masukkan nilai: ")
     val nilai = readLine()?.toIntOrNull() ?: 0
 
-    if (nilai >= 75) {
-        println("Halo $nama, kamu LULUS 🎉")
+    if (nilai >= 90) {
+        println("Grade A")
+    } else if (nilai >= 80) {
+        println("Grade B")
+    } else if (nilai >= 70) {
+        println("Grade C")
     } else {
-        println("Halo $nama, kamu TIDAK LULUS 😢")
+        println("Grade D")
     }
 }
