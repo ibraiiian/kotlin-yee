@@ -1,3 +1,12 @@
+fun hitungGrade(nilai: Int): String {
+    return when {
+        nilai >= 90 -> "A"
+        nilai >= 80 -> "B"
+        nilai >= 70 -> "C"
+        else -> "D"
+    }
+}
+
 fun main() {
     print("Masukkan nama: ")
     val nama = readLine() ?: "User"
@@ -5,13 +14,9 @@ fun main() {
     print("Masukkan nilai: ")
     val nilai = readLine()?.toIntOrNull() ?: 0
 
-    if (nilai >= 90) {
-        println("Halo $nama, Grade A")
-    } else if (nilai >= 80) {
-        println("Halo $nama, Grade B")
-    } else if (nilai >= 70) {
-        println("Halo $nama, Grade C")
-    } else {
-        println("Halo $nama, Grade D")
-    }
+    val grade = hitungGrade(nilai)
+
+    println("Halo $nama")
+    println("Nilai kamu: $nilai")
+    println("Grade kamu: $grade")
 }
